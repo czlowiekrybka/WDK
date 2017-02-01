@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /*Wstep do kryptologii;
 Laboratorium 2, zadanie 1(AES);
@@ -43,8 +43,8 @@ autor: Damian Dziubek I5X1N1;*/
 
 	$mymessageECB = "546f206a657374206d6f6a207a616b6f646f77616e792074656b73742e20546f207a6164616e6965206e6965206a6573742074616b696520747275646e65203a2920";
         $mymessageECB = pack('H*',$mymessageECB);
-	$mykeyECB = "123aaed54468da143ada143a123aaed54468da143ada143a";
-	$mykeyECB = pack('H*',$mykeyECB);
+	$mykeyECB = generateRandomString();
+	//$mykeyECB = pack('H*',$mykeyECB);
 	 
 	 $mycipherECB = " ";
 	 
@@ -56,8 +56,8 @@ autor: Damian Dziubek I5X1N1;*/
 
 	$mymessageCBC = "546f206a657374206d6f6a207a616b6f646f77616e792074656b73742e20546f207a6164616e6965206e6965206a6573742074616b696520747275646e65203a2920";
         $mymessageCBC = pack('H*',$mymessageCBC);
-	$mykeyCBC = "123aaed54468da143ada143a123aaed54468da143ada143a";
-	$mykeyCBC = pack('H*',$mykeyCBC);
+	$mykeyCBC = generateRandomString();
+	//$mykeyCBC = pack('H*',$mykeyCBC);
 	$auxivCBC = "e7f0a472369951ce7af3d26903da07ed";
 	$auxivCBC = pack('H*',$auxivCBC); 
 	 
@@ -73,8 +73,8 @@ autor: Damian Dziubek I5X1N1;*/
 
 	$mymessageCTR = "546f206a657374206d6f6a207a616b6f646f77616e792074656b73742e20546f207a6164616e6965206e6965206a6573742074616b696520747275646e65203a2920";
         $mymessageCTR = pack('H*',$mymessageCTR);
-	$mykeyCTR = "123aaed54468da143ada143a123aaed54468da143ada143a";
-	$mykeyCTR = pack('H*',$mykeyCTR);
+	$mykeyCTR = generateRandomString();
+	//$mykeyCTR = pack('H*',$mykeyCTR);
 	$auxivCTR = "11111111111111111111111111111111";
 	$auxivCTR = pack('H*',$auxivCTR);
 	 $mycipherCTR = " ";
@@ -83,6 +83,20 @@ autor: Damian Dziubek I5X1N1;*/
 	echo "wiadomość zaszyfrowana metodą CTR:<br />$mycipherCTR<br /><br />";
 
 	
+	
+	function generateRandomString($length = 16) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
+
+echo "randomowy string:  <br>";
+echo  generateRandomString();
 	
 	
 	
