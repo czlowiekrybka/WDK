@@ -1,0 +1,2 @@
+1.Plik otworzyłem funkcją open(). Na pewno są inne sposoby, lecz ten był dla mnie wystarczający.
+2.Przy kodowaniu RSA użyłem klucza 1024b, aby zmniejszyć czas wykonywania.
