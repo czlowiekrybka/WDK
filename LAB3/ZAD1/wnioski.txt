@@ -1,0 +1,3 @@
+Skrypt realizuje się pomyślnie, skróty są wykonywane poprawnie. 
+Wybralem SSDEEP oraz SHA-256 do wygenerowania skrótu podobnych plików.
+Pisanie skryptu nie obyło się bez małych i dużych problemów, na szczęście skróty `zostały zrealizowane pomyślnie. 
