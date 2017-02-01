@@ -1,0 +1,5 @@
+1. Niestety nie udało mi się dotrzeć do źródła bibliotek. Jedyne sposoby aby porównać te algorytmy to skuteczność (wszystkie działały poprawne), oraz szybkość działania, którą mógłbym zmierzyć odpowiednio modyfikując kod.
+
+3. W moim programie nie obliczałem szybkości działania algorytmów.
+
+4. Korzystałem ze strony http://php.net/

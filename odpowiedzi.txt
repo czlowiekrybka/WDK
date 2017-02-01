@@ -1,5 +1,0 @@
-1. Niestety nie uda³o mi siê dotrzeæ do Ÿród³a bibliotek. Jedyne sposoby aby porównaæ te algorytmy to skutecznoœæ (wszystkie dzia³a³y poprawne), oraz szybkoœæ dzia³ania, któr¹ móg³bym zmierzyæ odpowiednio modyfikuj¹c kod.
-
-3. W moim programie nie oblicza³em szybkoœci dzia³ania algorytmów.
-
-4. Korzysta³em ze strony http://php.net/
