@@ -1,5 +1,16 @@
-1. Niestety nie udało mi się dotrzeć do źródła bibliotek. Jedyne sposoby aby porównać te algorytmy to skuteczność (wszystkie działały poprawne), oraz szybkość działania, którą mógłbym zmierzyć odpowiednio modyfikując kod.
+1. Niestety nie udało mi się dotrzeć do źródła bibliotek. Jedyne sposoby aby porównać te algorytmy to skuteczność
+(wszystkie działały poprawne), oraz szybkość działania, którą mógłbym zmierzyć odpowiednio modyfikując kod.
+
+2. Aby chronić kod przed inżynierią wsteczną możemy nie udostępniać go w całości użytkownikowi (np. w PHP funkcje mogą wykonywać się na serwerze) bądź użyć nieco bardziej skomplikowanych metod, np. szyfrowania homomorficznego.
+
 
 3. W moim programie nie obliczałem szybkości działania algorytmów.
 
 4. Korzystałem ze strony http://php.net/
+
+5. Wyjątek "java.security.InvalidKeyException: Illegal key size" wynika z ograniczenia nałożonego przez JDK z domyślnymi ustawieniami
+
+6. ECB - posiadając kilka tekstów jawnych i ich szyfrogramów można odtworzyć książkę kodową.
+   CBC - wykorzystuje sprzężenie zwrotne, więc jeśli utracimy jeden z zaszyfrowanych bloków to tracimy jedynie dwa bloki. Aby utrzymać bezpieczeństwo należy zmieniać tajny klucz.
+   CTR - tracąc jeden bit kodu jawnego lub szyfrogramu tracimy tylko bit odpowiadajacy mu po przeksztalceniu, reszta jest poprawna. Tutaj również należy zmieniać tajny klucz, lecz rzadziej niż w przypadku CBC
+   
