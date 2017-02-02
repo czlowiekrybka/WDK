@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- 
-from Crypto.publiclicKey import RSA
+from Crypto.publicKey import RSA
 from Crypto import Random
 
  
@@ -10,7 +9,7 @@ public = open('mykeypublic.pem','w')
 priv = open('mykeypriv.pem','w')
 
 
-public.write(key.publiclickey().exportKey()) 
+public.write(key.publickey().exportKey()) 
 priv_key = priv.write(key.exportKey('PEM', passphrase=None, pkcs=8)) 
 
 
