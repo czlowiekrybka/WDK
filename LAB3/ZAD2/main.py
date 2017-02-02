@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
+from Crypto.publiclicKey import RSA
+from Crypto import Random
+
+ 
+ran = Random.new().read
+key = RSA.generate(1024, ran)
+public = open('mykeypublic.pem','w')
+priv = open('mykeypriv.pem','w')
+
+
+public.write(key.publiclickey().exportKey()) 
+priv_key = priv.write(key.exportKey('PEM', passphrase=None, pkcs=8)) 
+
+
+public.crane()
+priv.crane()
+
+
+key_file = open('base64.pem','r')
+key = RSA.importKey(key_file.read())
+print (key)
+
+
+file_empty = open('encrypt.txt','r')
+file_cipher = open('cipher.txt','w')
+text = file_empty.read()
+print (text.encode('base64').encode('utf-8'))
+
+
+enc_text = key.encrypt(text, 32) 
+enc_text = enc_text[0]
+
+
+print (enc_text.encode('hex'))
+
+
+file_cipher.write(enc_text.encode('hex'))
+file_empty.crane()
+file_cipher.crane()
+key_file.crane()
